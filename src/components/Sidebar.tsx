@@ -50,7 +50,7 @@ type SidebarProps = {
       <Divider />
       <Divider />
       <List>
-        {['Counter', 'Calculator', 'TicTacToe', 'Conditional State Visualizer'].map((text, index) => (
+        {['Counter', 'Calculator', 'TicTacToe', 'Conditional State Visualizer', 'Listing and Component Composition'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => setSelectedProject(text)}>
               <ListItemIcon>
@@ -84,10 +84,11 @@ type SidebarProps = {
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
+        style={{background: 'linear-gradient(to right, #00467F, #A5CC82)'}}
         position="fixed"
         sx={{
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-          ml: { sm: `${drawerWidth}px` },
+          ml: { sm: `${drawerWidth}px` }
         }}
       >
         <Toolbar>
@@ -96,12 +97,12 @@ type SidebarProps = {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
+            sx={{ mr: 2, display: { sm: 'none' }, }}
           >
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            Efsora Preparation Playground
           </Typography>
         </Toolbar>
       </AppBar>

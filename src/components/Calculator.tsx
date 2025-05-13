@@ -46,10 +46,13 @@ export default function Calculator() {
         <div className="card">
             <h2>Calculator</h2>
             <input type="number" value={number1} onChange={handleNumber1Change} />
-            <button onClick={() => {handleOperation("+")}}>+</button>
-            <button onClick={() => {handleOperation("-")}}>-</button>
-            <button onClick={() => {handleOperation("*")}}>*</button>
-            <button onClick={() => {handleOperation("/")}}>/</button>
+            <div className="row">
+                <button className="col-6" onClick={() => { handleOperation("+") }}>+</button>
+                <button className="col-6" onClick={() => { handleOperation("-") }}>-</button>
+                <button className="col-6" onClick={() => { handleOperation("*") }}>*</button>
+                <button className="col-6" onClick={() => { handleOperation("/") }}>/</button>
+            </div>
+
             <input type="number" value={number2} onChange={handleNumber2Change} />
             <button onClick={handleCalculate}>=</button>
             <div>Result: {result}</div>

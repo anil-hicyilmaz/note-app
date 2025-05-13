@@ -17,7 +17,7 @@ import TimerIcon from '@mui/icons-material/Timer';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
-
+import ExtensionIcon from '@mui/icons-material/Extension';
 const drawerWidth = 240;
 
 
@@ -74,6 +74,8 @@ type SidebarProps = {
         return <SportsEsportsIcon />;
       case 'Conditional State Visualizer':
         return <RemoveRedEyeIcon />;
+      case 'Listing and Component Composition':
+        return <ExtensionIcon />;
       default:
         return null;
     }

@@ -50,7 +50,7 @@ type SidebarProps = {
       <Divider />
       <Divider />
       <List>
-        {['Counter', 'Calculator', 'TicTacToe', 'Conditional State Visualizer', 'Listing and Component Composition'].map((text, index) => (
+        {['Counter', 'Calculator', 'TicTacToe', 'Conditional State Visualizer', 'Listing and Component Composition'].map((text) => (
           <ListItem key={text} disablePadding>
             <ListItemButton onClick={() => setSelectedProject(text)}>
               <ListItemIcon>
@@ -121,7 +121,7 @@ type SidebarProps = {
           onClose={handleDrawerClose}
           sx={{
             display: { xs: 'block', sm: 'none' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, background: 'linear-gradient(to left, #00467F, #A5CC82)' },
           }}
           slotProps={{
             root: {
@@ -135,7 +135,7 @@ type SidebarProps = {
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
-            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth, background: 'linear-gradient(to left, #00467F, #A5CC82)' },
           }}
           open
         >

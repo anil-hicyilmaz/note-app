@@ -5,6 +5,7 @@ import { Counter } from './components/Counter';
 import Calculator from './components/Calculator';
 import TicTacToe from './components/TicTacToe';
 import ConditionalStateVisualizer from './components/ConditionalStateVisualizer';
+import ListingAndComponentComposition from './components/ListingAndComponentComposition';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState('');
@@ -19,8 +20,10 @@ function App() {
         return <TicTacToe></TicTacToe>
       case 'Conditional State Visualizer':
         return <ConditionalStateVisualizer></ConditionalStateVisualizer>
+      case 'Listing and Component Composition':
+        return <ListingAndComponentComposition></ListingAndComponentComposition>;
       default:
-        return <p>Lütfen bir proje seçin</p>;
+        return <p>Please select a project</p>;
     }
   };
   return (
@@ -28,7 +31,7 @@ function App() {
       <Sidebar  setSelectedProject={setSelectedProject}></Sidebar>
       <div>
         {renderProject()}
-        {<h2>{selectedProject} Projesi</h2>}
+        {selectedProject === '' ? null : <h2>{selectedProject} Project</h2>}
       </div>
     </>
   )
